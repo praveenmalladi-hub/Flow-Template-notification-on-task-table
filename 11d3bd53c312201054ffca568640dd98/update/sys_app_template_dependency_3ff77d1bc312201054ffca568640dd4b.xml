@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_template_dependency">
+    <sys_app_template_dependency action="INSERT_OR_UPDATE">
+        <dependency_definition display_value="TEMPLATE_SPOKE_INSTALLED">3502cf5d5320201008b0ddeeff7b1258</dependency_definition>
+        <input>{"scope_name":"sn_msteams_ahv2","spoke_name":"Microsoft Teams Graph"}</input>
+        <sys_class_name>sys_app_template_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 10:46:50</sys_created_on>
+        <sys_id>3ff77d1bc312201054ffca568640dd4b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name>sys_app_template_dependency_3ff77d1bc312201054ffca568640dd4b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 11:59:35</sys_updated_on>
+        <template display_value="Notify a workspace when a record is created in any Task Table">44857d97c312201054ffca568640ddd0</template>
+    </sys_app_template_dependency>
+</record_update>

@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>ft__notify_a_slack_channel_when_a_record_is_created_in_any_task_table</internal_name>
+        <label_cache>[{"name":"Created_1.current.assigned_to.last_name","label":"Trigger➛Task Record➛Assigned to➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Created_1.current.assigned_to.first_name","label":"Trigger➛Task Record➛Assigned to➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Created_1.current.due_date","label":"Trigger➛Task Record➛Due date","reference":"","reference_display":"Due date","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"task","column_name":"due_date"},{"name":"Created_1.current.priority","label":"Trigger➛Task Record➛Priority","reference":"","reference_display":"Priority","type":"choice","base_type":"choice","parent_table_name":"task","column_name":"priority"},{"name":"Created_1.current.number","label":"Trigger➛Task Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"task","column_name":"number"},{"name":"Created_1.current.short_description","label":"Trigger➛Task Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"task","column_name":"short_description"},{"name":"31e2d8c5-14ae-4a83-a4c1-0e2ab47d4685.error_message","label":"11➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7d112306-ba05-46d5-a632-c2483c1e9ada"}},{"name":"31e2d8c5-14ae-4a83-a4c1-0e2ab47d4685.status","label":"11➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"9192168d-aeeb-4bb9-b023-0e82bed094e6"}},{"name":"83ea4b02-ee4a-4b5e-bdc5-5a956a0db016.error_message","label":"9➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5a0cf97c-ad91-47f9-bf54-64191c59d2b3"}},{"name":"83ea4b02-ee4a-4b5e-bdc5-5a956a0db016.status","label":"9➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"90facf78-5ae0-4479-8d73-f36d6601f8a7"}},{"name":"576f1380-e8e0-461d-a416-a9494a5b6b95.error_message","label":"8➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"576f1380-e8e0-461d-a416-a9494a5b6b95.status","label":"8➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"576f1380-e8e0-461d-a416-a9494a5b6b95.Table","label":"8➛Problem Table","reference":"problem","reference_display":"Problem Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"576f1380-e8e0-461d-a416-a9494a5b6b95.Record","label":"8➛Problem Record","reference":"problem","reference_display":"Problem Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d5d6b52e-9e3d-4f85-bd6f-f1ed1fc27a38.error_message","label":"6➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"987f5059-1c90-4043-9973-00ae714e3dd8"}},{"name":"d5d6b52e-9e3d-4f85-bd6f-f1ed1fc27a38.status","label":"6➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0bf67cb7-e125-4bf3-bb9a-47e3dddef4b3"}},{"name":"92155fab-0b2e-4d2e-b7d4-99451d479b9a.error_message","label":"5➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"92155fab-0b2e-4d2e-b7d4-99451d479b9a.status","label":"5➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"92155fab-0b2e-4d2e-b7d4-99451d479b9a.Table","label":"5➛Change Request Table","reference":"change_request","reference_display":"Change Request Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"92155fab-0b2e-4d2e-b7d4-99451d479b9a.Record","label":"5➛Change Request Record","reference":"change_request","reference_display":"Change Request Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d662415f-f8ba-41dd-9ca0-5f7439ed47b2.error_message","label":"3➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"30f0dba4-986f-4fae-b871-30e19bb36a0f"}},{"name":"d662415f-f8ba-41dd-9ca0-5f7439ed47b2.status","label":"3➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"af477fbc-0fb5-46ce-9f11-7c2f5a519945"}},{"name":"Created_1.current.sys_id","label":"Trigger➛Task Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task","column_name":"sys_id"},{"name":"a40bdc0f-11cd-433a-b1e8-3eb2886033e3.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"a40bdc0f-11cd-433a-b1e8-3eb2886033e3.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"a40bdc0f-11cd-433a-b1e8-3eb2886033e3.Table","label":"2➛Incident Table","reference":"incident","reference_display":"Incident Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a40bdc0f-11cd-433a-b1e8-3eb2886033e3.Record","label":"2➛Incident Record","reference":"incident","reference_display":"Incident Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.sys_class_name","label":"Trigger➛Task Record➛Task type","reference":"","reference_display":"Task type","type":"choice","base_type":"choice","parent_table_name":"task","column_name":"sys_class_name"}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>FT - Notify a Slack Channel when a record is created in any Task Table</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:03:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1acb311fc312201054ffca568640dd88</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FT - Notify a Slack Channel when a record is created in any Task Table</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name>sys_hub_flow_1acb311fc312201054ffca568640dd88</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=1acb311fc312201054ffca568640dd88"/>
+    <sys_variable_value action="delete_multiple" query="document_key=1acb311fc312201054ffca568640dd88"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=1acb311fc312201054ffca568640dd88^sys_idNOT IN895ff19fc312201054ffca568640dd10"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Task Type is used to define what table your flow will run on. If you remove the condition, the flow will execute on Task and all tables that extend from Task. Add more conditions as needed.</comment>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>895ff19fc312201054ffca568640dd10</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=895ff19fc312201054ffca568640dd10"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>895ff19fc312201054ffca568640dd10</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-22 06:28:52</sys_created_on>
+        <sys_id>0063a5a4c362201054ffca568640ddac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <value/>
+        <variable display_value="Run flow In">3f1b9e4e0f103300b599bca2ff767e21</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>895ff19fc312201054ffca568640dd10</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>095ff19fc312201054ffca568640dd12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <value>task</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>895ff19fc312201054ffca568640dd10</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-22 06:28:52</sys_created_on>
+        <sys_id>4c63a5a4c362201054ffca568640ddab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <value>true</value>
+        <variable display_value="Run On Extended Tables">11ffbef2072200103bf10705afd300c2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>895ff19fc312201054ffca568640dd10</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>8d5ff19fc312201054ffca568640dd11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <value>sys_class_name=task</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=1acb311fc312201054ffca568640dd88^sys_idNOT IN16cb311fc312201054ffca568640dd89"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>1acb311fc312201054ffca568640dd88</id>
+        <name>FT - Notify a Slack Channel when a record is created in any Task Table</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:03:07</sys_created_on>
+        <sys_id>16cb311fc312201054ffca568640dd89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:03:07</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=1acb311fc312201054ffca568640dd88^sys_idNOT IN015ff19fc312201054ffca568640dd0a,c15ff19fc312201054ffca568640dd00"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</model>
+        <model_id>1acb311fc312201054ffca568640dd88</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_1acb311fc312201054ffca568640dd88</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>015ff19fc312201054ffca568640dd0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</model>
+        <model_id>1acb311fc312201054ffca568640dd88</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_1acb311fc312201054ffca568640dd88</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>c15ff19fc312201054ffca568640dd00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=1acb311fc312201054ffca568640dd88^sys_idNOT IN1d5ff19fc312201054ffca568640dd5b,555ff19fc312201054ffca568640dd32,5d5ff19fc312201054ffca568640dd1f,995ff19fc312201054ffca568640dd4f,d55ff19fc312201054ffca568640dd3e,d95ff19fc312201054ffca568640dd81,dd5ff19fc312201054ffca568640dd6c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <order>8</order>
+        <parent_ui_id>4d96b1d9-a3f9-4ec0-bdbd-30998652bc29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>1d5ff19fc312201054ffca568640dd5b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>576f1380-e8e0-461d-a416-a9494a5b6b95</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1d5ff19fc312201054ffca568640dd5b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1d5ff19fc312201054ffca568640dd5b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>195ff19fc312201054ffca568640dd5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <value>problem</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1d5ff19fc312201054ffca568640dd5b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>1d5ff19fc312201054ffca568640dd5b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d15ff19fc312201054ffca568640dd5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{Created_1.current.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>1d5ff19fc312201054ffca568640dd5b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>955ff19fc312201054ffca568640dd5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post Incident Details">5ad9fd2453e823007877ddeeff7b120c</action_type>
+        <action_type_parent/>
+        <comment>For Incidents, this action will post Short description, Category, State, and Priority, accompanied by whatever additional message you define.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <order>3</order>
+        <parent_ui_id>92dc2d64-c4c2-474d-a4b9-88bf0f99cd03</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>555ff19fc312201054ffca568640dd32</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>d662415f-f8ba-41dd-9ca0-5f7439ed47b2</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=555ff19fc312201054ffca568640dd32"/>
+    <sys_element_mapping action="delete_multiple" query="id=555ff19fc312201054ffca568640dd32"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_change</field>
+        <id>555ff19fc312201054ffca568640dd32</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d15ff19fc312201054ffca568640dd34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5ad9fd2453e823007877ddeeff7b120c</table>
+        <value>{{a40bdc0f-11cd-433a-b1e8-3eb2886033e3.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <order>2</order>
+        <parent_ui_id>92dc2d64-c4c2-474d-a4b9-88bf0f99cd03</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>5d5ff19fc312201054ffca568640dd1f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>a40bdc0f-11cd-433a-b1e8-3eb2886033e3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5d5ff19fc312201054ffca568640dd1f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5d5ff19fc312201054ffca568640dd1f</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>1d5ff19fc312201054ffca568640dd22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <value>incident</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5d5ff19fc312201054ffca568640dd1f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>5d5ff19fc312201054ffca568640dd1f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>d55ff19fc312201054ffca568640dd22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{Created_1.current.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5d5ff19fc312201054ffca568640dd1f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>995ff19fc312201054ffca568640dd22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post Change Details">bda03d6053e823007877ddeeff7b129d</action_type>
+        <action_type_parent/>
+        <comment>For Change Requests, this action will post Short description, Category, State, Priority, and Assignment group, accompanied by whatever additional message you define.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <order>6</order>
+        <parent_ui_id>555232fa-1250-4a57-be42-e1d40a125bd7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>995ff19fc312201054ffca568640dd4f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>d5d6b52e-9e3d-4f85-bd6f-f1ed1fc27a38</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=995ff19fc312201054ffca568640dd4f"/>
+    <sys_element_mapping action="delete_multiple" query="id=995ff19fc312201054ffca568640dd4f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_change</field>
+        <id>995ff19fc312201054ffca568640dd4f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>195ff19fc312201054ffca568640dd51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_bda03d6053e823007877ddeeff7b129d</table>
+        <value>{{92155fab-0b2e-4d2e-b7d4-99451d479b9a.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <order>5</order>
+        <parent_ui_id>555232fa-1250-4a57-be42-e1d40a125bd7</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d55ff19fc312201054ffca568640dd3e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>92155fab-0b2e-4d2e-b7d4-99451d479b9a</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d55ff19fc312201054ffca568640dd3e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d55ff19fc312201054ffca568640dd3e</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d15ff19fc312201054ffca568640dd40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <value>change_request</value>
+        <variable display_value="Table">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d55ff19fc312201054ffca568640dd3e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>d55ff19fc312201054ffca568640dd3e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>9d5ff19fc312201054ffca568640dd3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>sys_id={{Created_1.current.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>d55ff19fc312201054ffca568640dd3e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>515ff19fc312201054ffca568640dd40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post Message">fad28afe0b0f54106918478d83673a63</action_type>
+        <action_type_parent/>
+        <comment>For all other Task types, the flow will post the message below. Modify based on your specific requirements.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <order>11</order>
+        <parent_ui_id>b17deb36-5b81-468c-8025-e8646a7253a4</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d95ff19fc312201054ffca568640dd81</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>31e2d8c5-14ae-4a83-a4c1-0e2ab47d4685</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d95ff19fc312201054ffca568640dd81"/>
+    <sys_element_mapping action="delete_multiple" query="id=d95ff19fc312201054ffca568640dd81"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_message</field>
+        <id>d95ff19fc312201054ffca568640dd81</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d55ff19fc312201054ffca568640dd83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fad28afe0b0f54106918478d83673a63</table>
+        <value>A new Task has been created with the following details:
+Task type: {{Created_1.current.sys_class_name}}
+Short description: {{Created_1.current.short_description}}
+Number: {{Created_1.current.number}}
+Priority: {{Created_1.current.priority}}
+Due date: {{Created_1.current.due_date}}
+Assigned To:  {{Created_1.current.assigned_to.first_name}}{{Created_1.current.assigned_to.last_name}}</value>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Post Problem Details">937e39a453e823007877ddeeff7b1271</action_type>
+        <action_type_parent/>
+        <comment>For Problems, this action will post Problem statement, Category, State, Priority, and Assignment to, accompanied by whatever additional message you define.</comment>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <order>9</order>
+        <parent_ui_id>4d96b1d9-a3f9-4ec0-bdbd-30998652bc29</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>dd5ff19fc312201054ffca568640dd6c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>83ea4b02-ee4a-4b5e-bdc5-5a956a0db016</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dd5ff19fc312201054ffca568640dd6c"/>
+    <sys_element_mapping action="delete_multiple" query="id=dd5ff19fc312201054ffca568640dd6c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_change</field>
+        <id>dd5ff19fc312201054ffca568640dd6c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>5d5ff19fc312201054ffca568640dd6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_action_input_937e39a453e823007877ddeeff7b1271</table>
+        <value>{{576f1380-e8e0-461d-a416-a9494a5b6b95.Record}}</value>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=1acb311fc312201054ffca568640dd88^sys_idNOT IN155ff19fc312201054ffca568640dd52,495ff19fc312201054ffca568640dd14,595ff19fc312201054ffca568640dd6f,dd5ff19fc312201054ffca568640dd34"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">5d5ff19fc312201054ffca568640dd51</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>155ff19fc312201054ffca568640dd52</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>4d96b1d9-a3f9-4ec0-bdbd-30998652bc29</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=155ff19fc312201054ffca568640dd52"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>155ff19fc312201054ffca568640dd52</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>915ff19fc312201054ffca568640dd55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <value>Task type is Problem</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=155ff19fc312201054ffca568640dd52"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>155ff19fc312201054ffca568640dd52</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>115ff19fc312201054ffca568640dd55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created_1.current.sys_class_name}}=problem</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>155ff19fc312201054ffca568640dd52</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>5d5ff19fc312201054ffca568640dd54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">495ff19fc312201054ffca568640dd13</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>495ff19fc312201054ffca568640dd14</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>92dc2d64-c4c2-474d-a4b9-88bf0f99cd03</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=495ff19fc312201054ffca568640dd14"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>495ff19fc312201054ffca568640dd14</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>dd5ff19fc312201054ffca568640dd18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <value>Task type is Incident</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=495ff19fc312201054ffca568640dd14"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>495ff19fc312201054ffca568640dd14</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>5d5ff19fc312201054ffca568640dd18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created_1.current.sys_class_name}}=incident</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>495ff19fc312201054ffca568640dd14</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>055ff19fc312201054ffca568640dd18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">915ff19fc312201054ffca568640dd6f</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>595ff19fc312201054ffca568640dd6f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>b17deb36-5b81-468c-8025-e8646a7253a4</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=595ff19fc312201054ffca568640dd6f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>595ff19fc312201054ffca568640dd6f</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d55ff19fc312201054ffca568640dd72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <value>If Task type is not Incident, Change, or Problem</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=595ff19fc312201054ffca568640dd6f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>595ff19fc312201054ffca568640dd6f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>555ff19fc312201054ffca568640dd72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created_1.current.sys_class_name}}!=incident^{{Created_1.current.sys_class_name}}!=change_request^{{Created_1.current.sys_class_name}}!=problem</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>595ff19fc312201054ffca568640dd6f</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>915ff19fc312201054ffca568640dd72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">195ff19fc312201054ffca568640dd34</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="FT - Notify a Slack Channel when a record is created in any Task Table">1acb311fc312201054ffca568640dd88</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>dd5ff19fc312201054ffca568640dd34</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-22 06:28:52</sys_updated_on>
+        <ui_id>555232fa-1250-4a57-be42-e1d40a125bd7</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=dd5ff19fc312201054ffca568640dd34"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>dd5ff19fc312201054ffca568640dd34</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>5d5ff19fc312201054ffca568640dd37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <value>Task type is Change Request</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=dd5ff19fc312201054ffca568640dd34"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>dd5ff19fc312201054ffca568640dd34</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>d95ff19fc312201054ffca568640dd37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{Created_1.current.sys_class_name}}=change_request</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>dd5ff19fc312201054ffca568640dd34</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:37</sys_created_on>
+        <sys_id>195ff19fc312201054ffca568640dd37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:37</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_1acb311fc312201054ffca568640dd88^sys_idNOT IN415ff19fc312201054ffca568640dd08,cd5ff19fc312201054ffca568640dd0d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_1acb311fc312201054ffca568640dd88</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>415ff19fc312201054ffca568640dd08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_1acb311fc312201054ffca568640dd88</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 11:18:36</sys_created_on>
+        <sys_id>cd5ff19fc312201054ffca568640dd0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 11:18:36</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>

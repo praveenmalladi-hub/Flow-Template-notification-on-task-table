@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_template_manifest">
+    <sys_app_template_manifest action="INSERT_OR_UPDATE">
+        <description/>
+        <order>100</order>
+        <sys_class_name>sys_app_template_manifest</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 10:39:30</sys_created_on>
+        <sys_id>4b56fdd7c312201054ffca568640dd7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name>sys_app_template_manifest_4b56fdd7c312201054ffca568640dd7f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 10:39:30</sys_updated_on>
+        <table_name display_value="Flow" name="sys_hub_flow">2935587b2ca520109bcad8f3275dfd4d</table_name>
+        <template display_value="Notify a workspace when a record is created in any Task Table">44857d97c312201054ffca568640ddd0</template>
+    </sys_app_template_manifest>
+</record_update>

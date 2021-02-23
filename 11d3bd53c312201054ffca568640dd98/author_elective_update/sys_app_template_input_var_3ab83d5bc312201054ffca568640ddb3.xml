@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_template_input_var">
+    <sys_app_template_input_var action="DELETE">
+        <default/>
+        <description/>
+        <flow_input_variable/>
+        <mandatory>false</mandatory>
+        <name>wp_message</name>
+        <sys_class_name>sys_app_template_input_var</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 10:49:48</sys_created_on>
+        <sys_id>3ab83d5bc312201054ffca568640ddb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wp_message</sys_name>
+        <sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_update_name>sys_app_template_input_var_3ab83d5bc312201054ffca568640ddb3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 10:49:48</sys_updated_on>
+        <template display_value="Notify a workspace when a record is created in any Task Table">44857d97c312201054ffca568640ddd0</template>
+        <type>string</type>
+    </sys_app_template_input_var>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</application>
+        <file_path/>
+        <instance_id>0d4e883f2c2120109bcad8f3275dfd24</instance_id>
+        <instance_name>glide_db_dump</instance_name>
+        <name>sys_app_template_input_var_3ab83d5bc312201054ffca568640ddb3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app_template_input_var"><sys_app_template_input_var action="INSERT_OR_UPDATE"><default/><description/><flow_input_variable/><mandatory>false</mandatory><name>wp_message</name><sys_class_name>sys_app_template_input_var</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-02-18 10:49:48</sys_created_on><sys_id>3ab83d5bc312201054ffca568640ddb3</sys_id><sys_mod_count>0</sys_mod_count><sys_name>wp_message</sys_name><sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package><sys_policy/><sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope><sys_update_name>sys_app_template_input_var_3ab83d5bc312201054ffca568640ddb3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-02-18 10:49:48</sys_updated_on><template display_value="Notify a workspace when a record is created in any Task Table">44857d97c312201054ffca568640ddd0</template><type>string</type></sys_app_template_input_var></record_update>]]></payload>
+        <payload_hash>-1077714430</payload_hash>
+        <record_name>wp_message</record_name>
+        <reverted_from/>
+        <source>55d3bd53c312201054ffca568640dd9a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 10:52:26</sys_created_on>
+        <sys_id>7959759bc312201054ffca568640dd68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177b4c5054a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 10:52:26</sys_updated_on>
+        <type>Template Input Variable</type>
+        <update_guid>63b83d5b5c122010f45ab5626204bfde</update_guid>
+        <update_guid_history>63b83d5b5c122010f45ab5626204bfde:-1077070924,63b83d5b5c122010f45ab5626204bfde:-1077070924</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 10:52:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_template_input_var">sys_app_template_input_var</sys_db_object>
+        <sys_id>388eee8005634c2e8c5a044771c00ac4</sys_id>
+        <sys_metadata>3ab83d5bc312201054ffca568640ddb3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wp_message</sys_name>
+        <sys_package display_value="Flow Template notification on task table" source="sn_ft_task_ws_noti">11d3bd53c312201054ffca568640dd98</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Flow Template notification on task table">11d3bd53c312201054ffca568640dd98</sys_scope>
+        <sys_scope_delete display_value="">e5a7c4dc5f6f45bda8d8c21940511591</sys_scope_delete>
+        <sys_update_name>sys_app_template_input_var_3ab83d5bc312201054ffca568640ddb3</sys_update_name>
+        <sys_update_version display_value="sys_app_template_input_var_3ab83d5bc312201054ffca568640ddb3">7959759bc312201054ffca568640dd68</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 10:52:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
